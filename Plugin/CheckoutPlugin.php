@@ -304,11 +304,6 @@ class CheckoutPlugin
      */
     public function updateItemsTotals(\Magento\Quote\Api\Data\TotalsInterface $cartTotals, \Mgroup\Taxify\Model\Response\TaxEngineResponse $response)
     {
-        $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/an3.log');
-        $logger = new \Zend\Log\Logger();
-        $logger->addWriter($writer);
-        $logger->info('data123');
-
         try {
 
             $quote = $this->checkoutSession->getQuote();

@@ -107,11 +107,6 @@ class EditCartPlugin
         $cartId,
         \Magento\Checkout\Api\Data\TotalsInformationInterface $addressInformation)
     {
-        $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/an1.log');
-        $logger = new \Zend\Log\Logger();
-        $logger->addWriter($writer);
-        $logger->info('runnnn');
-
         /** Run original method to load addresses */
         $proceed($cartId, $addressInformation);
         /** Read current Cart data */
@@ -306,11 +301,6 @@ class EditCartPlugin
      */
     public function updateItemsTotals(\Magento\Quote\Api\Data\TotalsInterface $cartTotals, \Mgroup\Taxify\Model\Response\TaxEngineResponse $response)
     {
-        $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/an3.log');
-        $logger = new \Zend\Log\Logger();
-        $logger->addWriter($writer);
-        $logger->info('data123');
-
         try {
 
             $quote = $this->checkoutSession->getQuote();
