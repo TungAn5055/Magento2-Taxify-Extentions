@@ -4,19 +4,7 @@
     <type name="Magento\Checkout\Model\ShippingInformationManagement">
         <plugin name="Taxify_TaxCalculation" type="\Mgroup\Taxify\Plugin\CheckoutPlugin" sortOrder="10"/>
     </type>
-<!--    <type name="Magento\Checkout\Model\PaymentInformationManagement">-->
-<!--        <plugin name="Sovos_TaxCalculation" type="\Sovos\TaxCalculation\Plugin\OrderPlugin" sortOrder="10"/>-->
-<!--    </type>-->
-<!--    <type name="Magento\Multishipping\Block\Checkout\Overview">-->
-<!--        <plugin name="Sovos_Multishipping_TaxCalculation" type="\Sovos\TaxCalculation\Plugin\MultiShippingPlugin" sortOrder="10"/>-->
-<!--    </type>-->
-<!--    <type name="Magento\Multishipping\Model\Checkout\Type\Multishipping">-->
-<!--        <plugin name="Sovos_Audit_Multishipping_TaxCalculation" type="\Sovos\TaxCalculation\Plugin\AuditPlugin" sortOrder="10"/>-->
-<!--    </type>-->
-<!--	<type name="Magento\Checkout\Model\TotalsInformationManagement">-->
-<!--        <plugin name="Sovos_UpdateCart_TaxCalculation" type="\Sovos\TaxCalculation\Plugin\EditCartPlugin" sortOrder="10"/>-->
-<!--    </type>-->
-<!--    <type name="Magento\Quote\Model\GuestCart\GuestCartManagement">-->
-<!--        <plugin name="Sovos_GuestCheckout_TaxCalculation" type="\Sovos\TaxCalculation\Plugin\GuestCheckoutPlugin" sortOrder="10"/>-->
-<!--    </type>-->
-    </config>
+    <type name="Magento\Checkout\Model\TotalsInformationManagement">
+        <plugin name="Taxify_UpdateCart_TaxCalculation" type="\Mgroup\Taxify\Plugin\EditCartPlugin" sortOrder="10"/>
+    </type>
+</config>

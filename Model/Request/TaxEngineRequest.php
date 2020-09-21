@@ -104,6 +104,12 @@ class TaxEngineRequest implements \JsonSerializable
 
     public function sendRequest()
     {
+        $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/an33.log');
+        $logger = new \Zend\Log\Logger();
+        $logger->addWriter($writer);
+        $logger->info('data');
+        $logger->info(json_encode($this->getRequestObject()));
+
         $url = 'https://ws.taxify.co/taxify/1.1/core/JSONService.asmx/CalculateTax';
 
         try {
