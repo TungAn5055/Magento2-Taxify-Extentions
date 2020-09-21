@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Config/etc/system_file.xsd">
+    <system>
+        <tab id="mgroup" translate="label" sortOrder="400">
+            <label>Mgroup Configurations</label>
+        </tab>
+        <section id="mgroup_taxify_section" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="11" translate="label">
+            <label>Taxify</label>
+            <tab>mgroup</tab>
+            <resource>Mgroup_Taxify::mgroup_taxify</resource>
+            <group id="general" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="10" translate="label">
+                <field id="apiKey" translate="label comment" type="text" sortOrder="21" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>API Key</label>
+                    <comment>
+                        Taxify API Key.
+                    </comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
